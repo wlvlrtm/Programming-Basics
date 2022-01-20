@@ -72,5 +72,11 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        UserInfoManager.Instance.SaveHighScore(m_Points);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
